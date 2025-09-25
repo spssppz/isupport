@@ -1,0 +1,168 @@
+@use "sass:math";
+
+// Подключение миксинов
+@import "base/mixins";
+
+// Подключение шрифтов
+@import "fonts/fonts";
+
+// Шрифт по умолчанию
+$fontFamily: "Geologica";
+$fontSize: rem(16); // размер шрифта по умолчанию
+
+// Основные цвета
+$mainColor: #11171c; // Цвет шрифта по умолчанию, $gray-900
+$red-5: #fff7f6;
+$red-10: #fff0ee;
+$red-25: #ffe4e1;
+$red-50: #ffcfc9;
+$red-100: #ffaba2;
+$red-200: #ff7c73;
+$red-300: #fa3e40;
+$red-400: #e01c29;
+$red-500: #c90011;
+$red-600: #ae0000;
+$red-700: #8b0000;
+$red-800: #650000;
+$red-900: #370000;
+$orange-5: #fff7eb;
+$orange-10: #fff2e2;
+$orange-25: #ffe7c6;
+$orange-50: #ffd295;
+$orange-100: #ffb139;
+$orange-200: #fe8200;
+$orange-300: #ea5615;
+$orange-400: #d13d00;
+$orange-500: #bd2900;
+$orange-600: #ab0d00;
+$orange-700: #8b0000;
+$orange-800: #600;
+$orange-900: #370000;
+$green-5: #f1fcf2;
+$green-10: #e6f9e7;
+$green-25: #d0f3d3;
+$green-50: #aae9b1;
+$green-100: #64d87a;
+$green-200: #00bd4b;
+$green-300: #009c3e;
+$green-400: #008534;
+$green-500: #007324;
+$green-600: #006312;
+$green-700: #004e00;
+$green-800: #003700;
+$green-900: #001c00;
+$blue-5: #f3f9fe;
+$blue-10: #ebf5fd;
+$blue-25: #dcedfb;
+$blue-50: #badefd;
+$blue-100: #84c8fe;
+$blue-200: #42abf8;
+$blue-300: #1687f2;
+$blue-400: #076af3;
+$blue-500: #1558e0;
+$blue-600: #2045cd;
+$blue-700: #122eb7;
+$blue-800: #090b9e;
+$blue-900: #150056;
+$purple-5: #f9f7ff;
+$purple-10: #f5f3ff;
+$purple-25: #ece6ff;
+$purple-50: #ded4fe;
+$purple-100: #c9b7fc;
+$purple-200: #b093f8;
+$purple-300: #996cf5;
+$purple-400: #874af8;
+$purple-500: #7727fd;
+$purple-600: #6500ef;
+$purple-700: #4b00c4;
+$purple-800: #330092;
+$purple-900: #1b0051;
+$gray-5: #f9f9fa;
+$gray-10: #f1f4f6;
+$gray-25: #e6ebef;
+$gray-50: #d5dbe1;
+$gray-100: #bbc2c8;
+$gray-200: #9da4ab;
+$gray-300: #80888f;
+$gray-400: #6c737a;
+$gray-500: #5c646c;
+$gray-600: #4c565f;
+$gray-700: #3b434a;
+$gray-800: #292f36;
+$white: #fff;
+$transparent: rgba(0, 0, 0, 0);
+$overlay: rgba(17, 23, 28, 0.4);
+$overlay-dark: rgba(17, 23, 28, 0.8);
+
+// Минимальная ширина страницы
+$minWidth: 360;
+// Ширина полотна (макета)
+// $maxWidth: 1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1280;
+// Общий отступ у контейнера
+$containerPadding: 64;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($maxWidthContainer - 0.02); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+// Обнуление и общие параметры
+@import "base/null";
+
+body {
+	font-weight: 200;
+	line-height: 1.5;
+	// Скролл заблокирован
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+	// Сайт загружен
+	.loaded & {
+	}
+}
+
+// Оболочка
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	// Прижимаем footer
+	main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+// Ограничивающий контейнер
+[class*="__container"] {
+	max-width: rem($maxWidthContainer);
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+	@media (max-width: $mobile) {
+		padding: rem(0) rem(16);
+	}
+}
+
+// Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
+// Для подключения/отключения конкретных стилей смотри base.scss
+@import "base";
+
+// Подключение стилей общих элементов проекта
+@import "common";
+
+// Подключение стилей отдельных блоков
+@import "header";
+@import "footer";
+
+// Подключение стилей отдельных страниц
+@import "home"; // Главная

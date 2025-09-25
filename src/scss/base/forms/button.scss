@@ -1,0 +1,13 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(0) rem(0);
+	@media (any-hover: hover) {
+		&:hover {
+		}
+	}
+}
