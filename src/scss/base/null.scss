@@ -28,7 +28,6 @@ body {
 
 body {
 	color: $mainColor;
-	line-height: 1;
 	font-family: $fontFamily, sans-serif;
 	font-size: $fontSize;
 	//text-rendering: optimizeLegibility;
@@ -44,7 +43,7 @@ button,
 textarea {
 	font-family: $fontFamily, sans-serif;
 	font-size: inherit;
-	line-height: 1;
+	line-height: inherit;
 }
 
 button {

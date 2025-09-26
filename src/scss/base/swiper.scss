@@ -34,3 +34,9 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+.swiper-button-disabled {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}

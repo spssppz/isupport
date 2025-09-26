@@ -12,6 +12,7 @@ $fontSize: rem(16); // размер шрифта по умолчанию
 
 // Основные цвета
 $mainColor: #11171c; // Цвет шрифта по умолчанию, $gray-900
+$gray-900: $mainColor;
 $red-5: #fff7f6;
 $red-10: #fff0ee;
 $red-25: #ffe4e1;
@@ -118,6 +119,7 @@ $mobileSmall: em(479.98); // Телефоны S
 body {
 	font-weight: 200;
 	line-height: 1.5;
+	background: $gray-10;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -159,6 +161,7 @@ body {
 
 // Подключение стилей общих элементов проекта
 @import "common";
+@import "global";
 
 // Подключение стилей отдельных блоков
 @import "header";

@@ -247,7 +247,7 @@ export const spollers = () => {
 				const spollerTitle = el.closest('[data-spoller]')
 				const spollersBlock = spollerTitle.closest('[data-spollers]')
 				const oneSpoller = spollersBlock.hasAttribute('data-one-spoller')
-				const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500
+				const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 400
 				if (!spollersBlock.querySelectorAll('._slide').length) {
 					if (oneSpoller && !spollerTitle.classList.contains('_spoller-active')) hideSpollersBody(spollersBlock)
 					spollerTitle.classList.toggle('_spoller-active')
@@ -259,7 +259,7 @@ export const spollers = () => {
 
 		function hideSpollersBody(spollersBlock) {
 			const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._spoller-active')
-			const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500
+			const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 400
 			if (spollerActiveTitle && !spollersBlock.querySelectorAll('._slide').length) {
 				spollerActiveTitle.classList.remove('_spoller-active')
 				_slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed)
@@ -274,7 +274,7 @@ export const spollers = () => {
 				if (!el.closest('[data-spollers]')) {
 					spollersClose.forEach(spollerClose => {
 						const spollersBlock = spollerClose.closest('[data-spollers]')
-						const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500
+						const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 400
 						if (!spollersBlock.querySelectorAll('._slide').length) {
 							spollerClose.classList.remove('_spoller-active')
 							_slideUp(spollerClose.nextElementSibling, spollerSpeed)

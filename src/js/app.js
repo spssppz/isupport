@@ -20,7 +20,7 @@ flsFunctions.isWebp();
 // flsFunctions.fullVHfix();
 
 /* Модуль работы со спойлерами */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /* lazyload */
 // import './files/lazyload.js'
@@ -73,7 +73,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 
 /* 

@@ -5,9 +5,34 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: rem(0) rem(0);
+	padding: rem(16) rem(24);
+	line-height: 1.25;
+	font-weight: 400;
+	color: $gray-5;
+	background: $gray-900;
+	border-radius: rem(800);
+	gap: rem(8);
 	@media (any-hover: hover) {
 		&:hover {
 		}
+	}
+	&_blue {
+		background: $blue-400;
+		color: $blue-5;
+	}
+	&_w {
+		box-shadow: 0 rem(4) rem(8) rem(-1) rgba(88, 117, 143, 0.28);
+		background: $white;
+		color: $gray-900;
+		padding: rem(10) rem(15) rem(10) rem(16);
+		font-size: rem(15);
+	}
+	&_decor {
+	}
+	&__icon {
+		flex: 0 0 rem(20);
+		width: rem(20);
+		height: rem(20);
+		transform: rotate(-90deg);
 	}
 }

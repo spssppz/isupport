@@ -8,11 +8,13 @@
 		"dev": "gulp",
 		"build": "gulp build --build",
 		"zip": "gulp deployZIP --build",
-		"ftp": "gulp deployFTP --build"
+		"ftp": "gulp deployFTP --build",
+		"svg": "gulp svg"
 	},
 	"author": "spsspp",
 	"license": "ISC",
 	"dependencies": {
+		"gulp-svg-sprite": "^2.0.3",
 		"swiper": "latest"
 	},
 	"devDependencies": {
@@ -26,6 +28,7 @@
 		"gulp-fonter-fix": "latest",
 		"gulp-format-html": "latest",
 		"gulp-group-css-media-queries": "latest",
+		"gulp-htmlmin": "latest",
 		"gulp-if": "latest",
 		"gulp-imagemin": "latest",
 		"gulp-newer": "latest",
@@ -46,7 +49,6 @@
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",
-		"webpack-stream": "latest",
-		"gulp-htmlmin": "latest"
+		"webpack-stream": "latest"
 	}
 }
