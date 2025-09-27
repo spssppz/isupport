@@ -1,0 +1,112 @@
+.team {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		overflow: hidden;
+	}
+	&__container {
+	}
+	&__descr {
+		font-weight: 300;
+		font-size: rem(18);
+		color: $gray-400;
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__slider {
+		@media (max-width: $mobile) {
+			overflow: visible;
+		}
+	}
+	&__wrapper {
+	}
+	&__slider-nav {
+	}
+	&__slider-btn {
+		&_prev {
+		}
+		&_next {
+		}
+	}
+}
+
+.slide-team {
+	margin-right: rem(16);
+	flex: 0 0 calc((100% - rem(16 * 3)) / 4);
+	background: $white;
+	border-radius: rem(16);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	min-height: rem(344);
+	padding: rem(48) rem(32);
+	@media (max-width: $pc) {
+		flex: 0 0 calc((100% - rem(16 * 2)) / 3);
+	}
+	@media (max-width: $tablet) {
+		flex: 0 0 calc((100% - rem(16)) / 2);
+		min-height: rem(302);
+		padding: rem(40) rem(32);
+	}
+	@media (max-width: $mobile) {
+		min-height: rem(278);
+		padding: rem(32) rem(16);
+	}
+	@media (max-width: $mobileSmall) {
+		flex: 0 0 100%;
+	}
+	&__image {
+		flex: 0 0 rem(144);
+		width: rem(144);
+		height: rem(144);
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__name {
+		font-weight: 300;
+		font-size: rem(18);
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+			line-height: 1.5;
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__descr {
+		font-size: rem(14);
+		color: $gray-600;
+	}
+}

@@ -1,4 +1,18 @@
+// Main page
+@import "sections/services";
+@import "sections/live";
 @import "sections/gallery";
 @import "sections/stats";
+@import "sections/team";
+@import "sections/reviews";
+@import "sections/partners";
 @import "sections/faq";
+@import "sections/contacts";
 @import "sections/offer";
+
+// Device page
+@import "sections/steps";
+// Service page
+@import "sections/other-services";
+@import "sections/repair-note";
+@import "sections/service-info";

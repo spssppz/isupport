@@ -1,0 +1,114 @@
+.device {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__descr {
+		font-weight: 300;
+		font-size: rem(20);
+		line-height: 1.6;
+		max-width: percent(560, 1280);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+			max-width: percent(560, 770);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+			max-width: none;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(32);
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: rem(16);
+		@media (max-width: $mobile) {
+			gap: rem(8);
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+.filter-device {
+	display: flex;
+	gap: rem(12);
+	flex-wrap: wrap;
+	&:not(:last-child) {
+		margin-bottom: rem(32);
+	}
+	&__item {
+		button {
+			font-size: rem(14);
+			line-height: 1.4;
+			padding: rem(7) rem(11);
+			background: $white;
+			border: rem(1) solid $gray-50;
+			border-radius: rem(800);
+			transition:
+				background 0.35s,
+				border-color 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					background: $blue-25;
+					border-color: $blue-400;
+				}
+			}
+			&.active {
+				background: $blue-25;
+				border-color: $blue-400;
+			}
+		}
+	}
+}
+.device-col {
+	border-radius: rem(8);
+	box-shadow: 0 rem(4) rem(8) rem(-1) rgba(88, 117, 143, 0.28);
+	background: $white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: rem(16);
+	position: relative;
+	@media (max-width: $mobile) {
+		padding: rem(16) rem(8);
+	}
+	&__image {
+		width: rem(112);
+		img {
+			width: 100%;
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(4);
+		}
+	}
+	&__link {
+		font-size: rem(15);
+		line-height: 1.6;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: rem(8);
+		}
+	}
+}

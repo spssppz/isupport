@@ -3,7 +3,6 @@
 	overflow: hidden;
 	@media (max-width: $tablet) {
 		padding: rem(40) rem(0);
-		display: none;
 	}
 	@media (max-width: $mobile) {
 		padding: rem(32) rem(0);

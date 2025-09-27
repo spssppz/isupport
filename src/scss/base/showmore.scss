@@ -1,8 +1,9 @@
-[data-showmore] {
-}
-[data-showmore-content] {
-}
 [data-showmore-button] {
+	line-height: 1.25;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	margin-top: rem(12);
+
 	span {
 		&:last-child {
 			display: none;

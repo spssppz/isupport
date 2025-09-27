@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Страница услуги"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="serv">
+				<div class="serv__container">
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li>
+								<a class="breadcrumbs__link" href="">Главная</a>
+							</li>
+							<li>
+								<a class="breadcrumbs__link" href="">Ремонт iPhone</a>
+							</li>
+							<li>
+								<a class="breadcrumbs__link" href="">iPhone 16 Pro Max</a>
+							</li>
+							<li>
+								<span class="breadcrumbs__item">Замена стекла</span>
+							</li>
+						</ul>
+					</nav>
+					<div class="serv__row">
+						<div class="serv__image">
+							<img srcset="@img/malfunc/2@2x.jpg 2x" src="@img/malfunc/2.jpg" width="400" height="400" alt="">
+						</div>
+						<div class="serv__content">
+							<div class="serv__middle">
+								<h1 class="serv__title title">Замена стекла на iPhone 16 Pro Max</h1>
+								<div class="serv__text">
+									<p>Стекло экрана iPhone 16 Pro Max разбито, изображение есть, сенсор работает. Меняем только разбитое стекло, сохраняя вашу оригинальную матрицу. Устанавливаем новую влагозащитную проклейку.</p>
+								</div>
+							</div>
+							<div class="serv-right">
+								<div class="serv-right__old-price">19 800 руб.</div>
+								<div class="serv-right__price">17 820 руб.</div>
+								<div class="serv-right__descr">
+									<p>Стоимость ремонта окончательная и включает в себя стоимость запчасти.</p>
+								</div>
+								<ul class="serv-right__list">
+									<li class="serv-right__item">
+										<svg class="serv-right__item-icon">
+											<use xlink:href="img/sprite.svg#clock"></use>
+										</svg>
+										Время ремонта: ~4-5 часов
+									</li>
+									<li class="serv-right__item">
+										<svg class="serv-right__item-icon">
+											<use xlink:href="img/sprite.svg#shield-tick"></use>
+										</svg>
+										Гарантия: 12  месяцев
+									</li>
+									<li class="serv-right__item">
+										<svg class="serv-right__item-icon">
+											<use xlink:href="img/sprite.svg#credit-card"></use>
+										</svg>
+										100% постоплата
+									</li>
+								</ul>
+								<div class="serv-right__disc">
+									<svg class="serv-right__disc-icon">
+										<use xlink:href="img/sprite.svg#gift"></use>
+									</svg>
+									Скидка -10% на первый заказ
+								</div>
+								<a class="serv-right__btn btn btn_decor btn_blue" href="">
+									Записаться на ремонт
+									<svg class="btn__icon btn__icon_arrow">
+										<use xlink:href="img/sprite.svg#chevron-down"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('html/sections/other-services.html')
+			@@include('html/sections/gallery-cases.html')
+			@@include('html/sections/repair-note.html')
+			@@include('html/sections/steps.html')
+			@@include('html/sections/live.html')
+			@@include('html/sections/gallery.html')
+			@@include('html/sections/stats.html')
+			@@include('html/sections/service-info.html')
+			@@include('html/sections/reviews.html')
+			@@include('html/sections/faq.html')
+			@@include('html/sections/contacts.html')
+			@@include('html/sections/offer.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

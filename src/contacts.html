@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Контакты"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<div class="contacts">
+				<div class="contacts__container">
+					<div class="contacts__body">
+						<div class="contacts__left">
+							<address class="contacts__address">Москва, ул. Никольская, 10</address>
+							<div class="contacts__descr">
+								<p>ТЦ «Вокруг света», 2 этаж</p>
+								<p>Ежедневно, 10:00—20:00</p>
+								<p><a href="tel:+74953746474">+7 (495) 374-64-74</a></p>
+							</div>
+							<a class="contacts__btn btn btn_b btn_decor" target="_blank" href="https://yandex.ru/maps/?text=Москва,%20ул.%20Никольская,%2010">
+								<svg class="btn__icon">
+									<use xlink:href="img/sprite.svg#navigation-pointer"></use>
+								</svg>
+								Открыть карту
+							</a>
+							<div class="contacts__row">
+								<ul class="contacts__metro-list">
+									<li class="metro">
+										<div class="metro__icon">
+											<img srcset="@img/icons/metro@2x.png 2x" src="@img/icons/metro.png" width="28" height="28" loading="lazy" alt="">
+										</div>
+										<div class="metro__descr">~ 1 мин. от м. Лубянка</div>
+									</li>
+									<li class="metro">
+										<div class="metro__icon">
+											<img srcset="@img/icons/metro@2x.png 2x" src="@img/icons/metro.png" width="28" height="28" loading="lazy" alt="">
+										</div>
+										<div class="metro__descr">~ 2 мин. от м. Площадь Революции</div>
+									</li>
+									<li class="metro">
+										<div class="metro__icon">
+											<img srcset="@img/icons/metro@2x.png 2x" src="@img/icons/metro.png" width="28" height="28" loading="lazy" alt="">
+										</div>
+										<div class="metro__descr">~ 3 мин. от м. Театральная</div>
+									</li>
+								</ul>
+								<div class="msg-contacts">
+									<div class="msg-contacts__top">
+										<div class="msg-contacts__icon">
+											<img src="@img/icons/parking.svg" width="32" height="32" loading="lazy" alt="">
+										</div>
+										<div class="msg-contacts__label">Всегда свободная парковка</div>
+									</div>
+									<div class="msg-contacts__descr">У ТЦ «Вокруг света», стоимость — 100 ₽/ч</div>
+								</div>
+							</div>
+						</div>
+						<div class="contacts__map" id="contacts-map" data-lat="55.75795656895255" data-lon="37.624543499999916"></div>
+					</div>
+				</div>
+			</div>
+			<section class="gallery">
+				<div class="gallery__container">
+					<div class="slider-wrapper">
+						<div class="gallery__slider swiper">
+							<ul class="gallery__wrapper swiper-wrapper">
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/1@2x.jpg 2x" src="@img/gallery/1.jpg" width="541" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/2@2x.jpg 2x" src="@img/gallery/2.jpg" width="480" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/3@2x.jpg 2x" src="@img/gallery/3.jpg" width="203" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/1@2x.jpg 2x" src="@img/gallery/1.jpg" width="541" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/2@2x.jpg 2x" src="@img/gallery/2.jpg" width="480" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/3@2x.jpg 2x" src="@img/gallery/3.jpg" width="203" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/1@2x.jpg 2x" src="@img/gallery/1.jpg" width="541" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/2@2x.jpg 2x" src="@img/gallery/2.jpg" width="480" height="360" loading="lazy" alt="">
+								</li>
+								<li class="gallery__slide swiper-slide">
+									<img srcset="@img/gallery/3@2x.jpg 2x" src="@img/gallery/3.jpg" width="203" height="360" loading="lazy" alt="">
+								</li>
+							</ul>
+						</div>
+						<div class="gallery__slider-nav slider-nav">
+							<button class="slider-nav__btn gallery__slider-btn gallery__slider-btn_prev" type="button" aria-label="Показать предыдущий слайд">
+								<svg class="slider-nav__icon">
+									<use xlink:href="img/sprite.svg#chevron-down"></use>
+								</svg>
+							</button>
+							<button class="slider-nav__btn slider-nav__btn_next gallery__slider-btn gallery__slider-btn_next" type="button" aria-label="Показать следующий слайд">
+								<svg class="slider-nav__icon">
+									<use xlink:href="img/sprite.svg#chevron-down"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="contacts-feedback contacts-feedback_section">
+				<div class="contacts-feedback__container">
+					<div class="contacts-feedback__body">
+						<div class="contacts-feedback__title title">Мы всегда на связи:</div>
+						<ul class="contacts-feedback__socials">
+							<li class="contacts-feedback__social">
+								<a href="">Перейти в telegram
+									<img loading="lazy" width="44" height="44" src="@img/icons/socials/tg.svg" alt="">
+								</a>
+							</li>
+							<li class="contacts-feedback__social">
+								<a href="">Перейти в whatsapp
+									<img loading="lazy" width="44" height="44" src="@img/icons/socials/whatsapp.svg" alt="">
+								</a>
+							</li>
+							<li class="contacts-feedback__social">
+								<a href="">Перейти в вконтакте
+									<img loading="lazy" width="44" height="44" src="@img/icons/socials/vk.svg" alt="">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			@@include('html/sections/offer.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

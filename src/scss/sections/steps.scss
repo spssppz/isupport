@@ -1,0 +1,72 @@
+.steps {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__cols {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: rem(24);
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(16);
+		}
+	}
+}
+
+.step {
+	&:not(:last-child) {
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: rem(47);
+			left: rem(95+24);
+			right: 0;
+			border: rem(1) solid $white;
+		}
+	}
+	&__icon {
+		flex: 0 0 rem(96);
+		width: rem(96);
+		height: rem(96);
+		border-radius: 50%;
+		background: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: percent(56, 96);
+			height: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+	&__cap {
+		font-weight: 300;
+		font-size: rem(18);
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__descr {
+		font-size: rem(15);
+		line-height: 1.6;
+		color: $gray-600;
+	}
+}

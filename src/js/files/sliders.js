@@ -16,6 +16,7 @@ Navigation, Pagination, Autoplay, EffectFade, Lazy, Manipulation
 // })
 
 function initSliders() {
+	// Main page
 	if (document.querySelector('.hero__slider')) {
 		new Swiper('.hero__slider', {
 			modules: [Pagination],
@@ -90,14 +91,18 @@ function initSliders() {
 		})
 	}
 	if (document.querySelector('.gallery__slider')) {
-		new Swiper('.gallery__slider', {
-			modules: [Navigation],
-			speed: 500,
-			slidesPerView: 'auto',
-			navigation: {
-				prevEl: '.gallery__slider-btn_prev',
-				nextEl: '.gallery__slider-btn_next',
-			},
+		const gallerySliders = document.querySelectorAll('.gallery__slider')
+		gallerySliders.forEach(gallerySlider => {
+			new Swiper(gallerySlider, {
+				modules: [Navigation],
+				speed: 500,
+				slidesPerView: 'auto',
+				navigation: {
+					prevEl: gallerySlider.parentElement.querySelector('.gallery__slider-btn_prev'),
+					nextEl: gallerySlider.parentElement.querySelector('.gallery__slider-btn_next'),
+				},
+			})
+
 		})
 	}
 	if (document.querySelector('.team__slider')) {
@@ -125,6 +130,32 @@ function initSliders() {
 				},
 				1280: {
 					slidesPerView: 4,
+					spaceBetween: 16,
+				},
+			},
+
+		})
+	}
+	if (document.querySelector('.reviews__slider')) {
+		new Swiper('.reviews__slider', {
+			modules: [Navigation],
+			speed: 500,
+			navigation: {
+				prevEl: '.reviews__slider-btn_prev',
+				nextEl: '.reviews__slider-btn_next',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 16,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				992: {
+					slidesPerView: 3,
 					spaceBetween: 16,
 				},
 			},
@@ -197,6 +228,34 @@ function initSliders() {
 				992: {
 					slidesPerView: 4,
 					spaceBetween: 24,
+				},
+			},
+
+		})
+	}
+	// Service Page
+	if (document.querySelector('.other-services__slider')) {
+		new Swiper('.other-services__slider', {
+			modules: [Navigation],
+			speed: 500,
+			spaceBetween: 16,
+			navigation: {
+				prevEl: '.other-services__slider-btn_prev',
+				nextEl: '.other-services__slider-btn_next',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					loop: true,
+				},
+				480: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1280: {
+					slidesPerView: 4,
 				},
 			},
 

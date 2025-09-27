@@ -1,0 +1,48 @@
+.other-services {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+		overflow: hidden;
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__slider {
+		@media (max-width: $mobile) {
+			overflow: visible;
+		}
+	}
+	&__wrapper {
+	}
+	&__price {
+		margin-right: rem(16);
+		flex: 0 0 calc((100% - rem(16 * 3)) / 4);
+		@media (max-width: $pc) {
+			flex: 0 0 calc((100% - rem(16 * 2)) / 3);
+		}
+		@media (max-width: $tablet) {
+			flex: 0 0 calc((100% - rem(16)) / 2);
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 100%;
+		}
+	}
+	&__slider-nav {
+	}
+	&__slider-btn {
+		&_prev {
+		}
+		&_next {
+		}
+	}
+}

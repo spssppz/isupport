@@ -1,0 +1,77 @@
+.about {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&__container {
+	}
+	&__head {
+		text-align: center;
+		color: #000;
+		&:not(:last-child) {
+			margin-bottom: rem(96);
+			@media (max-width: $tablet) {
+				margin-bottom: rem(80);
+			}
+			@media (max-width: $mobile) {
+				margin-bottom: rem(64);
+			}
+		}
+	}
+	&__title {
+		@media (min-width: $pc) {
+			max-width: percent(1000, 1280);
+			margin: 0 auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__descr {
+		margin: 0 auto;
+		font-weight: 300;
+		font-size: rem(22);
+		@media (min-width: $tablet) {
+			max-width: rem(680);
+		}
+		@media (max-width: $tablet) {
+			font-size: rem(20);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(18);
+		}
+	}
+	&__body {
+		border-radius: rem(24);
+		padding: rem(48) rem(32);
+		background: $white;
+		@media (max-width: $tablet) {
+			padding: rem(40) rem(32);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(32) rem(16);
+		}
+	}
+	&__content {
+		max-width: rem(640);
+		@media (max-width: $mobile) {
+			max-width: none;
+		}
+		ol,
+		ul,
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+}

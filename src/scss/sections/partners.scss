@@ -1,0 +1,71 @@
+.partners {
+	background: $white;
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(48);
+		@media (max-width: $tablet) {
+			margin-bottom: rem(40);
+		}
+		@media (max-width: $mobile) {
+			margin-bottom: rem(32);
+		}
+	}
+	&__head {
+		max-width: rem($maxWidthContainer);
+		box-sizing: content-box;
+		margin: 0 auto;
+		padding: 0 rem(math.div($containerPadding, 2));
+		@media (max-width: $mobile) {
+			padding: rem(0) rem(16);
+		}
+	}
+	&__descr {
+		font-weight: 300;
+		font-size: rem(18);
+		color: $gray-400;
+		@media (max-width: $tablet) {
+			font-size: rem(16);
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(15);
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__slider {
+	}
+	&__wrapper {
+		transition-timing-function: linear !important;
+	}
+	&__slide {
+		padding: rem(16);
+		img {
+			width: auto;
+			height: rem(64);
+			@media (max-width: $mobile) {
+				height: rem(52);
+			}
+			@media (max-width: $mobileSmall) {
+				height: rem(40);
+			}
+		}
+		&:not(:last-child) {
+			margin-right: rem(12);
+		}
+	}
+}

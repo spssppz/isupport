@@ -33,6 +33,8 @@
 		flex: 0 0 rem(20);
 		width: rem(20);
 		height: rem(20);
-		transform: rotate(-90deg);
+		&_arrow {
+			transform: rotate(-90deg);
+		}
 	}
 }

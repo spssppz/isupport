@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Вакансии"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="vacancies">
+				<div class="vacancies__container">
+					<h1 class="vacancies__title page-title">Открытые вакансии</h1>
+					<ul class="vacancies__cols" data-spollers>
+						<li class="vacancy">
+							<div class="vacancy__city">Москва</div>
+							<div class="vacancy__label">Сервисный инженер / мастер по ремонту iPhone</div>
+							<div class="vacancy__price">100 000 — 150 000 ₽</div>
+							<button class="vacancy__btn" type="button" aria-label="Показать подробнее" data-spoller></button>
+							<div class="vacancy__content content" hidden>
+								<p>ISUPPORT — лидер среди сервисных центров по ремонту техники Apple в Москве.</p>
+								<p>Наша репутация подтверждена доверием более 100 000 клиентов, включая известных техноблогеров Wylsacom и Макс Rozetked.</p>
+								<p>Мы специализируемся на качественном обслуживании техники Apple и искренне любим своё дело. Честность, аккуратность и открытость — главные ценности нашей команды. Присоединяйтесь к профессионалам, которые любят свою работу и доказывают это ежедневно.</p>
+								<h5>Что мы ждем от тебя:</h5>
+								<ul>
+									<li>Грамотную устную и письменную речь;</li>
+									<li>Честность, порядочность, ответственность и внимательность;</li>
+									<li>Умение работать в режиме многозадачности с вниманием к деталям;</li>
+									<li>Любовь к продукции Apple и готовность изучать особенности работы iOS и macOS.</li>
+								</ul>
+								<h5>Что нужно будет делать:</h5>
+								<ul>
+									<li>Консультировать клиентов по вопросам ремонта и стоимости услуг;</li>
+									<li>Принимать оборудование в ремонт и выдавать после ремонта;</li>
+									<li>Помогать клиентам подбирать аксессуары для их техники.</li>
+								</ul>
+							</div>
+							<a class="vacancy__link" href="">
+								Смотреть на hh.ru
+								<svg class="vacancy__link-icon">
+									<use xlink:href="img/sprite.svg#link-external"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="vacancy">
+							<div class="vacancy__city">Москва</div>
+							<div class="vacancy__label">Сервисный инженер / мастер по ремонту iPhone</div>
+							<div class="vacancy__price">100 000 — 130 000 ₽</div>
+							<button class="vacancy__btn" type="button" aria-label="Показать подробнее" data-spoller></button>
+							<div class="vacancy__content content" hidden>
+								<p>Наша репутация подтверждена доверием более 100 000 клиентов, включая известных техноблогеров Wylsacom и Макс Rozetked.</p>
+								<p>Мы специализируемся на качественном обслуживании техники Apple и искренне любим своё дело. Честность, аккуратность и открытость — главные ценности нашей команды. Присоединяйтесь к профессионалам, которые любят свою работу и доказывают это ежедневно.</p>
+								<h5>Что мы ждем от тебя:</h5>
+								<ul>
+									<li>Умение работать в режиме многозадачности с вниманием к деталям;</li>
+									<li>Любовь к продукции Apple и готовность изучать особенности работы iOS и macOS.</li>
+								</ul>
+							</div>
+							<a class="vacancy__link" href="">
+								Смотреть на hh.ru
+								<svg class="vacancy__link-icon">
+									<use xlink:href="img/sprite.svg#link-external"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="job-info">
+				<div class="job-info__container">
+					<div class="job-info__image">
+						<img srcset="@img/job-info/1@2x.jpg 2x" src="@img/job-info/1.jpg" width="656" height="369" loading="lazy" alt="">
+					</div>
+					<div class="job-info__content">
+						<h2 class="job-info__title title">Работа в ISUPPORT</h2>
+						<div class="job-info__descr">
+							<p>Мы работаем с 2010 года, создаём все условия для роста и развития каждого. Ежегодно сотрудники повышают квалификацию, участвуют в отраслевых конференциях и проходят обучение. У нас ценится командная работа, и мы всегда поддерживаем друг друга.</p>
+						</div>
+						<div class="job-info__label">
+							<p>Присоединяйтесь к нам, и вместе мы продолжим создавать лучший сервис для наших клиентов и развивать технологии будущего!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

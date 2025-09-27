@@ -10,7 +10,7 @@ flsFunctions.isWebp();
 // flsFunctions.addLoadedClass();
 
 /* Модули для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 // flsFunctions.closeMenuWithSwipe();
 
 /* Модуль для плавной прокрутки к якорям */
@@ -26,10 +26,10 @@ flsFunctions.spollers();
 // import './files/lazyload.js'
 
 /* Модуль работы с табами */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /* Модуль "показать еще" */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /* Попапы Сниппет (HTML): pl */
 // import './libs/popup.js'
@@ -52,7 +52,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль работы с select. */
 // import './libs/select.js'
@@ -111,7 +111,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 // import './libs/wNumb.min.js';
 
 /* Подключаем Яндекс карту */
-// import "./files/map.js";
+import "./files/map.js";
 
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
