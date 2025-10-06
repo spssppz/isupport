@@ -12,13 +12,27 @@
 	background: $gray-900;
 	border-radius: rem(800);
 	gap: rem(8);
+	transition: 0.4s;
 	@media (any-hover: hover) {
 		&:hover {
+			opacity: 0.8;
 		}
 	}
 	&_blue {
 		background: $blue-400;
 		color: $blue-5;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue-400;
+				background: $blue-5;
+				opacity: 1;
+			}
+		}
+	}
+	&_bd {
+		color: $blue-500;
+		background: transparent;
+		border: rem(1) solid $blue-50;
 	}
 	&_w {
 		box-shadow: 0 rem(4) rem(8) rem(-1) rgba(88, 117, 143, 0.28);
@@ -26,6 +40,12 @@
 		color: $gray-900;
 		padding: rem(10) rem(15) rem(10) rem(16);
 		font-size: rem(15);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $white;
+				background: $gray-900;
+			}
+		}
 	}
 	&_decor {
 	}

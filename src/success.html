@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Доставка: Успешная отправка"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<div class="success">
+				<div class="success__container">
+					<div class="success__body">
+						<div class="success__icon">
+							<img src="@img/icons/message-check.svg" width="56" height="56" alt="">
+						</div>
+						<h1 class="success__title title">Заявка отправлена</h1>
+						<div class="success__descr">
+							<p>Менеджер перезвонит вам, чтобы подтвердить дату и время доставки вашего устройства.</p>
+						</div>
+						<a class="success__btn btn btn_bd" href="">Вернуться на главную</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

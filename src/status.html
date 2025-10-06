@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Статус заказа"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="status">
+				<div class="status__container">
+					<div class="status__body">
+						<div class="status__image">
+							<img srcset="@img/status/1@2x.jpg 2x" src="@img/status/1.jpg" width="240" height="240" alt="">
+						</div>
+						<div class="status__content">
+							<div class="status__middle">
+								<h2 class="status__title title">Заказ №43242</h2>
+								<div class="status__label">Замена стекла на iPhone 16 Pro Max</div>
+								<div class="status__row">
+									<div class="status__item">Создан 15.05.2025, 15:35</div>
+									<div class="status__item">Мастер: Стол 2 (Владимир)</div>
+								</div>
+							</div>
+							<div class="status-descr">
+								<ul class="status-descr__cols">
+									<li class="status-descr__col">
+										<div class="status-descr__cap">Стоимость</div>
+										<div class="status-descr__descr">17 820 руб.</div>
+									</li>
+									<li class="status-descr__col">
+										<div class="status-descr__cap">Будет готово</div>
+										<div class="status-descr__descr">Вторник, 15 мая, к 19:30</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<ul class="status__cols">
+						<li class="status-col status-col_prev">
+							<div class="status-col__icon">
+								<span></span>
+							</div>
+							<div class="status-col__right">
+								<div class="status-col__label">1. Подготовка</div>
+								<div class="status-col__descr">
+									<p>Аккуратно демонтируем, очищаем от пыли. Готовим к установке запчастей.</p>
+								</div>
+							</div>
+						</li>
+						<li class="status-col status-col_current">
+							<div class="status-col__icon">
+								<span></span>
+							</div>
+							<div class="status-col__right">
+								<div class="status-col__label">2. В работе</div>
+								<div class="status-col__descr">
+									<p>Производим ремонт и замену запчастей. Восстанавливаем заводскую герметичность.</p>
+								</div>
+							</div>
+						</li>
+						<li class="status-col">
+							<div class="status-col__icon">
+								<span></span>
+							</div>
+							<div class="status-col__right">
+								<div class="status-col__label">3. Внутренний контроль</div>
+								<div class="status-col__descr">
+									<p>Тестируем все функции. Возвращаем устройство — как новое.</p>
+								</div>
+							</div>
+						</li>
+						<li class="status-col">
+							<div class="status-col__icon">
+								<span></span>
+							</div>
+							<div class="status-col__right">
+								<div class="status-col__label">4. Готов к выдаче</div>
+								<div class="status-col__descr">
+									<p>Вместе с устрйоством выдаём чек и гарантию на 12 месяцев.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="live">
+				<div class="live__container">
+					<h2 class="live__title title">Прямой эфир из мастерской</h2>
+					<div class="live__body">
+						<div class="live-iframe">
+							<iframe src="https://www.youtube.com/embed/0FBiyFpV__g" title="YouTube  video player" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+							<button class="live-iframe__btn live-iframe__btn_pause" type="button" aria-label="Пауза">
+								<svg class="live-iframe__btn-icon">
+									<use xlink:href="img/sprite.svg#pause"></use>
+								</svg>
+							</button>
+							<button class="live-iframe__btn live-iframe__btn_full" type="button" aria-label="Открыть на весь экран">
+								<svg class="live-iframe__btn-icon">
+									<use xlink:href="img/sprite.svg#full"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="live-actions">
+							<button class="live-actions__switch live-actions__switch_current">
+								<span class="live-actions__cap">Общий вид</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Камера на мастерскую</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 1 (Кирилл)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 2 (Владимир)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 3 (Павел)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch live-actions__switch_offline">
+								<span class="live-actions__cap">Стол 4 (Константин)</span>
+								<span class="live-actions__status">оффлайн</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch live-actions__switch_offline">
+								<span class="live-actions__cap">Стол 5 (Александр)</span>
+								<span class="live-actions__status">оффлайн</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			@@include('html/sections/faq.html')
+			@@include('html/sections/contacts-feedback.html')
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

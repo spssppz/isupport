@@ -1,4 +1,4 @@
-.live {
+.live-main {
 	padding: rem(48) rem(0);
 	border-top: rem(1) solid $gray-50;
 
@@ -53,6 +53,17 @@
 		border-radius: rem(24);
 		overflow: hidden;
 		display: block;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: rem(80);
+			height: rem(80);
+			background: url("@img/icons/play.svg") 50% / 100% no-repeat;
+		}
 		img {
 			width: 100%;
 			height: auto;

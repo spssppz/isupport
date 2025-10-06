@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Доставка"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="delivery">
+				<div class="delivery__container">
+					<div class="delivery__body">
+						<div class="delivery__left">
+							<h2 class="delivery__title title">Доставка курьером</h2>
+							<form class="delivery-form form-validate" data-error-msg="Ошибка при оформлении. Пожалуйста, попробуйте ещё раз." action="#">
+								<div class="delivery-form__inputs">
+									<div class="delivery-form__row">
+										<label class="delivery-form__input-wrapper input-wrapper">
+											<span class="input-wrapper__placeholder">Имя *</span>
+											<input class="input req" required autocomplete="off" type="text" name="delivery_name">
+										</label>
+										<label class="delivery-form__input-wrapper input-wrapper">
+											<span class="input-wrapper__placeholder">Телефон *</span>
+											<input class="input phone req-phone" required autocomplete="off" type="tel" name="delivery_phone">
+										</label>
+									</div>
+									<label class="delivery-form__input-wrapper input-wrapper">
+										<span class="input-wrapper__placeholder">Адрес *</span>
+										<input class="input req" required autocomplete="off" type="text" name="delivery_address">
+										<span class="input-wrapper__descr">начните вводить и выберите из списка</span>
+									</label>
+									<label class="delivery-form__input-wrapper input-wrapper">
+										<span class="input-wrapper__placeholder">Что везём</span>
+										<input class="input" autocomplete="off" type="text" name="delivery_target">
+									</label>
+									<div class="delivery-form__row">
+										<div class="delivery-form__sel-wrapper sel-wrapper">
+											<div class="sel-wrapper__placeholder">Дата доставки:</div>
+											<div class="custom-sel">
+												<button class="custom-sel__btn" type="button">
+													<span>11.06</span>
+													<svg class="custom-sel__icon">
+														<use xlink:href="img/sprite.svg#chevron-down"></use>
+													</svg>
+												</button>
+												<input class="custom-sel__input" type="hidden">
+												<div class="custom-sel__sub">
+													<button type="button" data-value="08.06">08.06</button>
+													<button type="button" data-value="09.06">09.06</button>
+													<button type="button" data-value="10.06">10.06</button>
+													<button type="button" data-value="11.06">11.06</button>
+													<button type="button" data-value="12.06">12.06</button>
+													<button type="button" data-value="13.06">13.06</button>
+													<button type="button" data-value="14.06">14.06</button>
+													<button type="button" data-value="15.06">15.06</button>
+													<button type="button" data-value="16.06">16.06</button>
+													<button type="button" data-value="17.06">17.06</button>
+													<button type="button" data-value="18.06">18.06</button>
+													<button type="button" data-value="19.06">19.06</button>
+													<button type="button" data-value="20.06">20.06</button>
+												</div>
+											</div>
+										</div>
+										<div class="delivery-form__sel-wrapper sel-wrapper">
+											<div class="sel-wrapper__placeholder">Интервал доставки:</div>
+											<div class="custom-sel">
+												<button class="custom-sel__btn" type="button">
+													<span>14:00 - 18:00</span>
+													<svg class="custom-sel__icon">
+														<use xlink:href="img/sprite.svg#chevron-down"></use>
+													</svg>
+												</button>
+												<input class="custom-sel__input" type="hidden">
+												<div class="custom-sel__sub">
+													<button type="button" data-value="14:00-18:00">14:00 - 18:00</button>
+													<button type="button" data-value="15:00-19:00">15:00 - 19:00</button>
+													<button type="button" data-value="17:00-20:00">17:00 - 20:00</button>
+													<button type="button" data-value="18:00-20:00">19:00 - 20:00</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="delivery-form__price">Стоимость доставки: 0 ₽</div>
+								<button class="delivery-form__btn btn btn_blue" type="submit">Оформить заявку</button>
+							</form>
+						</div>
+						<div class="delivery-right">
+							<img class="delivery-right__bg" src="@img/delivery/bg.jpg" srcset="@img/delivery/bg@2x.jpg 2x" width="680" height="708" alt="">
+							<div class="delivery-right__logo">
+								<img src="@img/delivery/logo.svg" width="80" height="80" alt="">
+							</div>
+							<ul class="delivery-right__list">
+								<li class="delivery-right__item">
+									<div class="delivery-right__icon">
+										<img src="@img/delivery/1.svg" width="28" height="28" alt="">
+									</div>
+									<div class="delivery-right__descr">Доставка от 15 минут</div>
+								</li>
+								<li class="delivery-right__item">
+									<div class="delivery-right__icon">
+										<img src="@img/delivery/2.svg" width="28" height="28" alt="">
+									</div>
+									<div class="delivery-right__descr">До сервиса и обратно</div>
+								</li>
+								<li class="delivery-right__item">
+									<div class="delivery-right__icon">
+										<img src="@img/delivery/3.svg" width="28" height="28" alt="">
+									</div>
+									<div class="delivery-right__descr">Устройства застрахованы</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

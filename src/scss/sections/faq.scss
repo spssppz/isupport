@@ -15,10 +15,16 @@
 		}
 	}
 	&__cols {
+		display: grid;
 		@media (min-width: $tablet) {
-			columns: 2;
+			grid-template-columns: 1fr 1fr;
 			gap: rem(24);
 		}
+		@media (max-width: $tablet) {
+			gap: rem(12);
+		}
+	}
+	&__col {
 	}
 }
 

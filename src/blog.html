@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Блог"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="articles">
+				<div class="articles__container">
+					<h1 class="articles__title page-title">Блог</h1>
+					<ul class="articles__filter filter-device">
+						<li class="filter-device__item">
+							<button class="active" type="button">Новости сервиса</button>
+						</li>
+						<li class="filter-device__item">
+							<button type="button">Новости Apple</button>
+						</li>
+						<li class="filter-device__item">
+							<button type="button">Лайфхаки</button>
+						</li>
+					</ul>
+					<ul class="articles__cols">
+						<li class="articles__col">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/1@2x.jpg 2x" src="@img/articles/1.jpg" width="1000" height="400" alt="">
+								<div class="article__row">
+									<div class="article__tag">Лайфхаки</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">5 ошибок, которые убивают ваш iPhone — и как их избежать</a>
+								</h2>
+							</article>
+						</li>
+						<li class="articles__col articles__col_2">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/2@2x.jpg 2x" src="@img/articles/2.jpg" width="488" height="320" alt="">
+								<div class="article__row">
+									<div class="article__tag">Лайфхаки</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">5 ошибок, которые убивают ваш iPhone — и как их избежать</a>
+								</h2>
+							</article>
+						</li>
+						<li class="articles__col articles__col_2">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/3@2x.jpg 2x" src="@img/articles/3.jpg" width="488" height="320" alt="">
+								<div class="article__row">
+									<div class="article__tag">Лайфхаки</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">Как защитить свой аккаунт Apple: 4 простых совета</a>
+								</h2>
+							</article>
+						</li>
+						<li class="articles__col articles__col_3">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/4@2x.jpg 2x" src="@img/articles/4.jpg" width="317" height="320" loading="lazy" alt="">
+								<div class="article__row">
+									<div class="article__tag">Лайфхаки</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">5 ошибок, которые убивают ваш iPhone — и как их избежать</a>
+								</h2>
+							</article>
+						</li>
+						<li class="articles__col articles__col_3">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/5@2x.jpg 2x" src="@img/articles/5.jpg" width="317" height="320" loading="lazy" alt="">
+								<div class="article__row">
+									<div class="article__tag">Лайфхаки</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">Как защитить свой аккаунт Apple: 4 простых совета</a>
+								</h2>
+							</article>
+						</li>
+						<li class="articles__col articles__col_3">
+							<article class="article">
+								<img class="article__bg" srcset="@img/articles/6@2x.jpg 2x" src="@img/articles/6.jpg" width="317" height="320" loading="lazy" alt="">
+								<div class="article__row">
+									<div class="article__tag">Новости сервиса</div>
+									<time class="article__date" datetime="2025-04-16">16 апр 2025 г.</time>
+								</div>
+								<h2 class="article__label">
+									<a href="">Как мы восстанавливаем технику после попадания влаги — кейсы клиентов</a>
+								</h2>
+							</article>
+						</li>
+					</ul>
+					@@include('html/pagging.html')
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

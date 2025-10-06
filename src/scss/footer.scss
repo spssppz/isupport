@@ -105,13 +105,13 @@
 		a {
 			font-size: rem(15);
 			line-height: 1.6;
-			text-decoration: underline;
 			text-decoration-skip-ink: none;
 			color: $white;
 			transition: color 0.35s;
 			@media (any-hover: hover) {
 				&:hover {
 					color: $gray-300;
+					text-decoration: underline;
 				}
 			}
 		}

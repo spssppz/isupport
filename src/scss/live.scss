@@ -1,0 +1,145 @@
+.live {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__body {
+		display: grid;
+		background: $gray-900;
+		border-radius: rem(16);
+		overflow: hidden;
+		@media (min-width: $tablet) {
+			grid-template-columns: 1fr percent(400, 1280);
+		}
+	}
+}
+
+.live-iframe {
+	position: relative;
+	video,
+	img,
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (min-width: $tablet) {
+		min-height: rem(495);
+	}
+	@media (max-width: $tablet) {
+		padding-bottom: percent(433, 770);
+	}
+	&__btn {
+		position: absolute;
+		bottom: rem(16);
+		background: $overlay-dark;
+		border-radius: rem(12);
+		width: rem(48);
+		height: rem(48);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: opacity 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&_pause {
+			left: rem(16);
+		}
+		&_full {
+			right: rem(16);
+		}
+	}
+	&__btn-icon {
+		width: rem(32);
+		height: rem(32);
+		color: $white;
+	}
+}
+
+.live-actions {
+	padding: rem(16);
+	display: flex;
+	flex-direction: column;
+	gap: rem(4);
+	@media (max-width: $mobile) {
+		padding: rem(8);
+	}
+	&__switch {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(4);
+		text-align: left;
+		border-radius: rem(12);
+		padding: rem(10) rem(12);
+		transition: background 0.3s;
+		&_current {
+			background: $gray-700;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: $gray-700;
+			}
+		}
+		&_offline {
+			pointer-events: none;
+			@media (any-hover: hover) {
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+	}
+	&__cap {
+		font-weight: 400;
+		line-height: 1.25;
+		color: $white;
+	}
+	&__status {
+		font-weight: 300;
+		font-size: rem(12);
+		line-height: 1.7;
+		letter-spacing: 0.04em;
+		color: $green-100;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(4);
+		&::before {
+			content: "";
+			flex: 0 0 rem(10);
+			width: rem(10);
+			height: rem(10);
+			border-radius: 50%;
+			background: currentColor;
+		}
+		.live-actions__switch_offline & {
+			color: $gray-200;
+		}
+	}
+	&__descr {
+		font-size: rem(14);
+		line-height: 1.6;
+		flex: 0 0 100%;
+		color: $gray-25;
+	}
+}

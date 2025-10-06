@@ -11,6 +11,7 @@ function initMap() {
 		const map = new ymaps.Map('contacts-map', {
 			center: coords,
 			zoom: 14,
+			controls: ['zoomControl'],
 		})
 
 		const placemark = new ymaps.Placemark(coords, {}, {
@@ -23,14 +24,36 @@ function initMap() {
 	}
 }
 
-if (document.querySelector('#contacts-map')) {
-	window.addEventListener('load', () => {
-		setTimeout(() => {
-			const mapScript = document.createElement('script')
-			mapScript.src = `https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=${apikey}&lang=ru_RU`
-			document.querySelector('.wrapper').after(mapScript)
+function loadYandexMapScript(callback) {
+	if (window.ymaps) {
+		callback()
+		return
+	}
 
-			setTimeout(() => ymaps.ready(initMap), 3000)
-		}, 1000)
-	})
+	const script = document.createElement('script')
+	script.src = `https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=${apikey}&lang=ru_RU`
+	script.async = true
+	script.onload = () => ymaps.ready(callback)
+	document.body.appendChild(script)
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const mapEl = document.querySelector('#contacts-map')
+
+	if (!mapEl) return
+
+	const observer = new IntersectionObserver((entries, obs) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				loadYandexMapScript(initMap)
+				obs.unobserve(entry.target) // чтобы не вызывалось повторно
+			}
+		})
+	}, {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.1, // запускаем, когда карта хотя бы на 10% видна
+	})
+
+	observer.observe(mapEl)
+})

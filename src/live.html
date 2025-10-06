@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Прямой эфир"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<section class="live">
+				<div class="live__container">
+					<h2 class="live__title title">Прямой эфир из мастерской</h2>
+					<div class="live__body">
+						<div class="live-iframe">
+							<iframe src="https://www.youtube.com/embed/0FBiyFpV__g" title="YouTube  video player" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen ></iframe>
+							<button class="live-iframe__btn live-iframe__btn_pause" type="button" aria-label="Пауза">
+								<svg class="live-iframe__btn-icon">
+									<use xlink:href="img/sprite.svg#pause"></use>
+								</svg>
+							</button>
+							<button class="live-iframe__btn live-iframe__btn_full" type="button" aria-label="Открыть на весь экран">
+								<svg class="live-iframe__btn-icon">
+									<use xlink:href="img/sprite.svg#full"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="live-actions">
+							<button class="live-actions__switch live-actions__switch_current">
+								<span class="live-actions__cap">Общий вид</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Камера на мастерскую</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 1 (Кирилл)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 2 (Владимир)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch">
+								<span class="live-actions__cap">Стол 3 (Павел)</span>
+								<span class="live-actions__status">в эфире</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch live-actions__switch_offline">
+								<span class="live-actions__cap">Стол 4 (Константин)</span>
+								<span class="live-actions__status">оффлайн</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+							<button class="live-actions__switch live-actions__switch_offline">
+								<span class="live-actions__cap">Стол 5 (Александр)</span>
+								<span class="live-actions__status">оффлайн</span>
+								<span class="live-actions__descr">Заказ № 45232</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 /* Документация слайдера: https://swiperjs.com/ */
 
 import Swiper from 'swiper';
-import { Navigation, Autoplay, FreeMode, Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, FreeMode, Pagination, Mousewheel } from 'swiper/modules';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, EffectFade, Lazy, Manipulation
@@ -32,8 +32,9 @@ function initSliders() {
 	}
 	if (document.querySelector('.device-picker__slider')) {
 		new Swiper('.device-picker__slider', {
-			modules: [Navigation],
+			modules: [Navigation, Mousewheel],
 			speed: 500,
+			mousewheel: true,
 			navigation: {
 				prevEl: '.device-picker__slider-btn_prev',
 				nextEl: '.device-picker__slider-btn_next',
@@ -42,7 +43,6 @@ function initSliders() {
 				320: {
 					slidesPerView: 'auto',
 					spaceBetween: 0,
-					loop: true,
 				},
 				768: {
 					slidesPerView: 'auto',
@@ -62,8 +62,9 @@ function initSliders() {
 	}
 	if (document.querySelector('.services__slider')) {
 		new Swiper('.services__slider', {
-			modules: [Navigation],
+			modules: [Navigation, Mousewheel],
 			speed: 500,
+			mousewheel: true,
 			navigation: {
 				prevEl: '.services__slider-btn_prev',
 				nextEl: '.services__slider-btn_next',
@@ -72,7 +73,6 @@ function initSliders() {
 				320: {
 					slidesPerView: 'auto',
 					spaceBetween: 0,
-					loop: true,
 				},
 				768: {
 					slidesPerView: 'auto',
@@ -167,9 +167,7 @@ function initSliders() {
 			modules: [Autoplay, FreeMode],
 			slidesPerView: 'auto',
 			spaceBetween: 0,
-			speed: 3000,
-			allowTouchMove: false,
-			simulateTouch: false,
+			speed: 3500,
 			loop: true,
 			freeMode: {
 				enabled: true,
@@ -178,7 +176,10 @@ function initSliders() {
 			autoplay: {
 				delay: 0,
 				disableOnInteraction: false,
+				pauseOnMouseEnter: false,
 			},
+			allowTouchMove: false,
+			simulateTouch: false,
 		})
 	}
 	if (document.querySelector('.videos__slider')) {
@@ -193,7 +194,6 @@ function initSliders() {
 				320: {
 					slidesPerView: 1,
 					spaceBetween: 16,
-					loop: true,
 				},
 				768: {
 					slidesPerView: 2,
@@ -219,7 +219,6 @@ function initSliders() {
 				320: {
 					slidesPerView: 2,
 					spaceBetween: 16,
-					loop: true,
 				},
 				768: {
 					slidesPerView: 2,
@@ -246,7 +245,6 @@ function initSliders() {
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
-					loop: true,
 				},
 				480: {
 					slidesPerView: 2,

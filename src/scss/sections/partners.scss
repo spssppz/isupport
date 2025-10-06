@@ -54,6 +54,10 @@
 	}
 	&__slide {
 		padding: rem(16);
+		// margin-right: rem(12);
+		&:not(:last-child) {
+			margin-right: rem(12);
+		}
 		img {
 			width: auto;
 			height: rem(64);
@@ -63,9 +67,6 @@
 			@media (max-width: $mobileSmall) {
 				height: rem(40);
 			}
-		}
-		&:not(:last-child) {
-			margin-right: rem(12);
 		}
 	}
 }

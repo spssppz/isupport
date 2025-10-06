@@ -24,15 +24,18 @@
 
 	&__item {
 		color: $gray-500;
+		max-width: rem(200);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 }
 a.breadcrumbs__link {
 	color: $blue-600;
-	text-decoration: underline;
 	text-decoration-skip-ink: none;
 	@media (any-hover: hover) {
 		&:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
 	}
 }

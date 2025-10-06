@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Статья"
+})
+
+<body>
+
+	<div class="wrapper">
+		@@include('html/header.html')
+		<main class="page">
+			<div class="article-page">
+				<div class="article-page__container">
+					<nav class="article-page__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li>
+								<a class="breadcrumbs__link" href="">Главная</a>
+							</li>
+							<li>
+								<a class="breadcrumbs__link" href="">Блог</a>
+							</li>
+							<li>
+								<a class="breadcrumbs__link" href="">Новости Apple</a>
+							</li>
+							<li>
+								<span class="breadcrumbs__item">Ноутбуки Apple MacBook: какие бывают и чем различаются</span>
+							</li>
+						</ul>
+					</nav>
+					<div class="article-page__body">
+						<h1 class="article-page__title page-title">Ноутбуки Apple MacBook: какие бывают и чем различаются</h1>
+						<time class="article-page__date" datetime="2025-08-12">12 авг 2025 г.</time>
+						<div class="article-page__image">
+							<img srcset="@img/article/main@2x.jpg 2x" src="@img/article/main.jpg" width="800" height="500" alt="">
+						</div>
+						<div class="article-page__content content">
+							<p>Ноутбуки Apple MacBook стабильно пользуются популярностью благодаря дизайну, производительности и интеграции с экосистемой Apple. Сейчас компания выпускает три основные линейки ноутбуков: MacBook Air, MacBook Pro 13” и MacBook Pro 14" и 16".</p>
+							<p>MacBook Air: лёгкость и мобильность MacBook Air отличается тонким корпусом и минимальным весом (около 1,24 кг), что делает его идеальным для работы в дороге. Оснащён экраном Retina с диагональю 13,3 дюйма и процессорами Apple M-серии (M1 или M2), обеспечивающими высокую
+								производительность и долгую автономность (до 18 часов).</p>
+							<p class="msg">Перед покупкой стоит оценить требования к задачам и бюджету, чтобы выбрать наиболее подходящую модель.</p>
+							<p>MacBook Pro 13”: баланс производительности и компактности MacBook Pro 13” использует процессоры Apple M2, поддерживает систему активного охлаждения и обладает увеличенным временем работы от аккумулятора (до 20 часов). Также выделяется наличием панели Touch Bar, заменяющей
+								функциональные клавиши на сенсорный дисплей.</p>
+							<p>MacBook Pro 14” и 16”: профессиональная мощь Старшие модели MacBook Pro оснащены мощными процессорами Apple M2 Pro и M2 Max, экранами Liquid Retina XDR с технологией mini-LED и увеличенным количеством портов (HDMI, SD-карта, MagSafe, Thunderbolt). Эти ноутбуки ориентированы на
+								профессионалов, занимающихся сложной графикой, видеомонтажом или разработкой.</p>
+							<h2>Какой MacBook выбрать?</h2>
+							<ul>
+								<li>MacBook Air — оптимален для повседневных задач и частых перемещений.</li>
+								<li>MacBook Pro 13” — подходит для интенсивных задач при сохранении мобильности.</li>
+								<li>MacBook Pro 14" и 16" — лучшее решение для профессиональной работы с ресурсоёмкими приложениями.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="other-articles">
+				<div class="other-articles__container">
+					<h2 class="other-articles__title title">Ещё по этой теме</h2>
+					<ul class="other-articles__cols">
+						<li class="other-articles__blog-item blog-item">
+							<div class="blog-item__image">
+								<img srcset="@img/blog/1@2x.png 2x" src="@img/blog/1.png" width="302" height="200" loading="lazy" alt="">
+							</div>
+							<div class="blog-item__tag">Лайфхаки</div>
+							<h3 class="blog-item__label">
+								<a href="">5 ошибок, которые убивают ваш iPhone — и как их избежать</a>
+							</h3>
+							<time class="blog-item__date" datetime="2025-04-19">19 апр 2025 г.</time>
+						</li>
+					</ul>
+					<div class="other-articles__btn-wrapper">
+						<button class="other-articles__btn" type="button">
+							Показать ещё
+							<svg class="other-articles__btn-icon">
+								<use xlink:href="img/sprite.svg#chevron-down"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html')
+	</div>
+
+	<!-- @@include('html/popup.html') -->
+
+	@@include('html/js.html')
+
+</body>
+
+</html>

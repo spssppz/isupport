@@ -34,6 +34,11 @@
 			}
 		}
 	}
+	&__slider-wrapper {
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
 	&__slider {
 		@media (min-width: $pc) {
 			padding: rem(16) rem(10);
@@ -67,6 +72,8 @@
 	padding: rem(48) rem(32) rem(0);
 	position: relative;
 	overflow: hidden;
+	transition: transform 0.4s;
+	will-change: transform;
 	@media (min-width: $tablet) {
 		margin-right: rem(16);
 	}
@@ -83,6 +90,11 @@
 	}
 	@media (max-width: $mobileSmall) {
 		flex: 0 0 rem(264);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 	&:not(:last-child) {
 		@media (max-width: $tablet) {

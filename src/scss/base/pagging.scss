@@ -2,24 +2,43 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	&__arrow {
-	}
 	&__list {
 		display: flex;
+		align-items: center;
+		gap: rem(8);
 	}
 	&__item {
+		height: rem(36);
+		min-width: rem(36);
+		flex: 1 0 rem(36);
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-weight: 400;
 	}
 	&__link {
-		font-weight: 700;
-		font-size: rem(15);
-		color: #3d3d3d;
-		display: inline-flex;
+		font-size: rem(14);
+		line-height: 1.4;
+		border: rem(1) solid $gray-50;
+		background: $white;
+		border-radius: 50%;
+		flex: auto;
+		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: rem(2) solid #eaeaea;
+		transition: 0.3s;
 		&_active {
-			background: #f73313;
-			color: #fff;
+			background: $blue-25;
+			border-color: $blue-400;
 		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: $blue-25;
+			}
+		}
+	}
+	&__decor {
+		font-size: rem(16);
+		line-height: 2;
 	}
 }

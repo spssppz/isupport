@@ -155,3 +155,219 @@
 		}
 	}
 }
+
+//========================================================================================================================================================
+
+.serv-prices {
+	padding: rem(48) rem(0);
+	@media (max-width: $tablet) {
+		padding: rem(40) rem(0);
+	}
+	@media (max-width: $mobile) {
+		padding: rem(32) rem(0);
+	}
+	&__container {
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__cols {
+		@media (max-width: $tablet) {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			gap: rem(24) rem(16);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	&__text {
+		font-size: rem(14);
+		ul {
+			li {
+				padding-left: rem(20);
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					top: rem(8);
+					left: rem(8);
+					width: rem(4);
+					height: rem(4);
+					border-radius: 50%;
+					background: $mainColor;
+				}
+			}
+		}
+	}
+}
+
+.serv-prices-head {
+	display: flex;
+	gap: rem(8);
+	padding: rem(8);
+	@media (max-width: $tablet) {
+		display: none;
+	}
+	&:not(:last-child) {
+		margin-bottom: rem(8);
+	}
+	&__col {
+		flex: 0 0 percent(200, 1264);
+		font-weight: 400;
+		line-height: 1.25;
+		padding: rem(4) rem(8);
+		@media (max-width: $pc) {
+			flex: 0 0 13%;
+		}
+		&:first-child {
+			flex: 0 0 percent(432, 1264);
+			@media (max-width: $pc) {
+				flex: 0 0 percent(432, 1264);
+			}
+		}
+		&:last-child {
+			flex: auto;
+			@media (max-width: $pc) {
+				flex: auto;
+			}
+		}
+	}
+}
+
+.serv-price {
+	display: flex;
+	background: $white;
+	padding: rem(14) rem(8);
+	@media (min-width: $tablet) {
+		align-items: center;
+		gap: rem(8);
+		border-radius: rem(12);
+		box-shadow: 0 rem(1) 0 0 rgba(88, 117, 143, 0.2);
+	}
+	@media (max-width: $tablet) {
+		border-radius: rem(16);
+		padding: rem(24);
+		flex-direction: column;
+		min-height: rem(216);
+		position: relative;
+	}
+	@media (max-width: $mobile) {
+		min-height: rem(160);
+	}
+	&:not(:last-child) {
+		@media (min-width: $tablet) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__cap {
+		@media (min-width: $tablet) {
+			padding: rem(4) rem(8);
+			flex: 0 0 percent(432, 1264);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		@media (max-width: $tablet) {
+			font-weight: 300;
+			font-size: rem(18);
+			line-height: 1.6;
+			flex: auto;
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+		&:not(:last-child) {
+			@media (max-width: $tablet) {
+				margin-bottom: rem(8);
+			}
+		}
+	}
+	&__col {
+		padding: rem(4) rem(8);
+		flex: 0 0 percent(200, 1264);
+		@media (max-width: $pc) {
+			flex: 0 0 13%;
+		}
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&__descr {
+		font-size: rem(15);
+		line-height: 1.6;
+		color: $gray-500;
+		@media (min-width: $tablet) {
+			display: none;
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(4);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: rem(2);
+		font-weight: 400;
+		line-height: 1.4;
+		justify-content: flex-end;
+		@media (min-width: $tablet) {
+			font-size: rem(14);
+			color: $blue-500;
+			padding: rem(4) rem(8);
+			flex: auto;
+		}
+		@media (max-width: $tablet) {
+			justify-content: space-between;
+			gap: rem(12);
+			line-height: 1.2;
+		}
+		&::after {
+			@media (max-width: $tablet) {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: rem(16);
+			}
+		}
+		&_pc {
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+		&_mob {
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+	&__link-icon {
+		flex: 0 0 rem(18);
+		width: rem(18);
+		height: rem(18);
+		transform: rotate(-90deg);
+		@media (max-width: $tablet) {
+			flex: 0 0 rem(20);
+			width: rem(20);
+			height: rem(20);
+			color: $gray-200;
+		}
+	}
+}
