@@ -303,6 +303,7 @@
 	background: $blue-400;
 	padding: rem(8) rem(0);
 	position: relative;
+	display: none;
 	@media (min-width: $tablet) {
 		text-align: center;
 	}

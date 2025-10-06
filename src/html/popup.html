@@ -1,8 +1,72 @@
-<div class="popup" id="popup" aria-hidden="true">
+<div class="popup" id="application" aria-hidden="true">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button class="popup__close" data-close type="button">Закрыть</button>
-			<div class="popup__text">
+			<button class="popup__close" data-close type="button" aria-label="Закрыть"></button>
+			<div class="application">
+				<div class="popup-descr">Заявка на ремонт</div>
+				<div class="application__title">Получите скидку 10% на работу мастера на первый заказ.</div>
+				<form class="application-form form-validate" action="#">
+					<div class="application-form__inputs">
+						<label class="application-form__input-wrapper input-wrapper">
+							<span class="input-wrapper__placeholder">Ваше имя</span>
+							<input class="input req" required autocomplete="off" type="text" name="application_name">
+						</label>
+						<label class="application-form__input-wrapper input-wrapper">
+							<span class="input-wrapper__placeholder">Номер телефона</span>
+							<input class="input phone req-phone" required autocomplete="off" type="tel" name="application_phone" placeholder="+7(">
+						</label>
+						<label class="application-form__input-wrapper input-wrapper">
+							<span class="input-wrapper__placeholder">Модель устройства</span>
+							<input class="input" autocomplete="off" type="text" name="application_model" placeholder="Например, MacBook Air 13 M1">
+						</label>
+						<label class="application-form__input-wrapper input-wrapper">
+							<span class="input-wrapper__placeholder">Что случилось</span>
+							<textarea class="input" autocomplete="off" name="application_msg" placeholder="Например, не включается после попадания воды"></textarea>
+						</label>
+						<label class="checkbox">
+							<input class="checkbox__input req-checkbox" checked type="checkbox" value="accept" name="application_policy">
+							<span class="checkbox__text">Соглашаюсь с <a href="">Политикой обработки персональных данных</a></span>
+						</label>
+					</div>
+					<button class="application-form__btn btn btn_blue btn_decor" type="submit">
+						<svg class="application-form__btn-icon">
+							<use xlink:href="img/sprite.svg#send"></use>
+						</svg>
+						Отправить
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup" id="thanks" aria-hidden="true">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button class="popup__close" data-close type="button" aria-label="Закрыть"></button>
+			<div class="thanks">
+				<div class="thanks__descr popup-descr">Заявка на ремонт</div>
+				<div class="thanks__icon">
+					<img src="@img/icons/message-check.svg" width="44" height="44" loading="lazy" alt="">
+				</div>
+				<div class="thanks__label">Спасибо, мы перезвоним</div>
+				<div class="thanks__text">Менеджер перезвонит в ближайшее время.</div>
+				<button class="thanks__btn btn btn_bd" data-close type="button">Хорошо</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup" id="status" aria-hidden="true">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button class="popup__close" data-close type="button" aria-label="Закрыть"></button>
+			<div class="popup-status">
+				<div class="popup-status__descr popup-descr">Узнать статус заказа</div>
+				<form class="popup-status__form form-validate" action="#">
+					<input class="popup-status__input input" autocomplete="off" type="number" name="order_code" placeholder="Номер заказа в формате 1234XXXX">
+					<button class="popup-status__btn btn btn_blue" type="submit">Узнать статус</button>
+				</form>
+				<div class="error-msg" style="display: none;">Извините, такой заказ не найден.</div>
 			</div>
 		</div>
 	</div>

@@ -152,3 +152,14 @@ if (document.querySelector('.form-validate')) {
 		})
 	})
 }
+const info = document.querySelector('.info')
+const btn = document.querySelector('.info__close')
+
+if (!localStorage.getItem('infoClosed')) {
+	info.style.display = 'block'
+}
+
+btn.addEventListener('click', () => {
+	info.style.display = 'none'
+	localStorage.setItem('infoClosed', 'true')
+})

@@ -9,16 +9,24 @@
 		&:focus + .checkbox__text::before {
 			box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.2);
 		}
+
+		&.error + .checkbox__text {
+			color: $red-500;
+			a {
+				color: $red-500;
+			}
+		}
 		&:checked + .checkbox__text::after {
 			opacity: 1;
 		}
 	}
 	&__text {
 		font-weight: 500;
-		line-height: 1.25;
+		line-height: 1.3;
 		display: inline-block;
 		position: relative;
-		padding-left: rem(40);
+		padding-left: rem(34);
+		font-size: rem(15);
 		&::before,
 		&::after {
 			content: "";
@@ -26,22 +34,27 @@
 			top: 50%;
 			left: 0;
 			margin-top: rem(-12);
+			border-radius: rem(8);
 			width: rem(24);
 			height: rem(24);
 		}
 		&::before {
-			border-radius: rem(4);
-			border: rem(1) solid #000;
-			background: #fff;
+			background: $blue-400;
 		}
 		&::after {
-			// background: url("@img/icons/check.svg") 50% / 100% no-repeat;
+			background: url("@img/icons/check.svg") 50% / 80% no-repeat;
 			opacity: 0;
 			transition: opacity 0.3s;
 		}
 		a {
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
+			color: $blue-600;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }

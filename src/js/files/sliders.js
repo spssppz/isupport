@@ -16,6 +16,15 @@ Navigation, Pagination, Autoplay, EffectFade, Lazy, Manipulation
 // })
 
 function initSliders() {
+
+	if (document.querySelector('.header-bottom__nav')) {
+		new Swiper('.header-bottom__nav', {
+			modules: [FreeMode],
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			freeMode: true,
+		})
+	}
 	// Main page
 	if (document.querySelector('.hero__slider')) {
 		new Swiper('.hero__slider', {

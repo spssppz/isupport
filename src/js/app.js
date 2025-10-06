@@ -32,7 +32,7 @@ flsFunctions.tabs();
 flsFunctions.showMore();
 
 /* Попапы Сниппет (HTML): pl */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /* Модуль параллакса мышью */
 // import './libs/parallax-mouse.js'
