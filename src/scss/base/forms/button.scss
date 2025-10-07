@@ -15,25 +15,24 @@
 	transition: 0.4s;
 	@media (any-hover: hover) {
 		&:hover {
-			opacity: 0.8;
+			opacity: 0.7;
 		}
 	}
 	&_blue {
 		background: $blue-400;
 		color: $blue-5;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $blue-400;
-				background: $blue-5;
-				opacity: 1;
-			}
-		}
 	}
 	&_bd {
 		color: $blue-500;
 		background: transparent;
 		border: rem(1) solid $blue-50;
 		padding: rem(15) rem(23);
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $mainColor;
+				opacity: 1;
+			}
+		}
 	}
 	&_w {
 		box-shadow: 0 rem(4) rem(8) rem(-1) rgba(88, 117, 143, 0.28);

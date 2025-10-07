@@ -66,6 +66,12 @@
 		border-radius: rem(800);
 		border: rem(1) solid $blue-50;
 		font-weight: 400;
+		transition: border-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: $blue-200;
+			}
+		}
 	}
 	&__showmore-icon {
 	}

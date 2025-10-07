@@ -78,9 +78,18 @@ body::after {
 			background: $gray-600;
 			height: rem(2);
 			border-radius: rem(2);
+			transition: background 0.3s;
 		}
 		&::after {
 			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before,
+				&::after {
+					background: $mainColor;
+				}
+			}
 		}
 	}
 }

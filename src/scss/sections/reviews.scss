@@ -83,6 +83,12 @@ a.review__link {
 	text-decoration-skip-ink: none;
 	color: $blue-500;
 	display: inline-block;
+	transition: color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainColor;
+		}
+	}
 	&::after {
 		content: " →";
 	}

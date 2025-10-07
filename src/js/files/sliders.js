@@ -6,14 +6,7 @@ import { Navigation, Autoplay, FreeMode, Pagination, Mousewheel } from 'swiper/m
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, EffectFade, Lazy, Manipulation
 */
-// document.querySelectorAll('.gallery__slide').forEach(slide => {
-// 	const img = slide.querySelector('img')
-// 	img.addEventListener('load', () => {
-// 		const aspect = img.naturalWidth / img.naturalHeight
-// 		const height = slide.offsetHeight || 360 // желаемая высота слайда
-// 		slide.style.width = `${height * aspect}px`
-// 	})
-// })
+
 
 function initSliders() {
 
@@ -23,7 +16,17 @@ function initSliders() {
 			slidesPerView: 'auto',
 			spaceBetween: 0,
 			freeMode: true,
+			on: {
+				init(swiper) { updateShadows(swiper) },
+				resize(swiper) { updateShadows(swiper) },
+				setTranslate(swiper) { updateShadows(swiper) }
+			}
 		})
+
+		function updateShadows(swiper) {
+			document.querySelector('.header-bottom').classList.toggle('header-bottom_shadow-left', !swiper.isBeginning)
+			document.querySelector('.header-bottom').classList.toggle('header-bottom_shadow-right', !swiper.isEnd)
+		}
 	}
 	// Main page
 	if (document.querySelector('.hero__slider')) {
@@ -43,7 +46,9 @@ function initSliders() {
 		new Swiper('.device-picker__slider', {
 			modules: [Navigation, Mousewheel],
 			speed: 500,
-			mousewheel: true,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			navigation: {
 				prevEl: '.device-picker__slider-btn_prev',
 				nextEl: '.device-picker__slider-btn_next',
@@ -73,7 +78,9 @@ function initSliders() {
 		new Swiper('.services__slider', {
 			modules: [Navigation, Mousewheel],
 			speed: 500,
-			mousewheel: true,
+			mousewheel: {
+				releaseOnEdges: true,
+			},
 			navigation: {
 				prevEl: '.services__slider-btn_prev',
 				nextEl: '.services__slider-btn_next',

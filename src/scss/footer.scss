@@ -171,11 +171,13 @@
 	&__item {
 		flex: 0 0 rem(40);
 		width: rem(40);
+		height: rem(40);
 		display: flex;
 		a {
 			font-size: 0;
 			transition: transform 0.4s;
 			will-change: transform;
+			flex: auto;
 			@media (any-hover: hover) {
 				&:hover {
 					transform: scale(1.1);

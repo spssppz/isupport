@@ -121,6 +121,12 @@
 		display: flex;
 		align-items: center;
 		gap: rem(2);
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue-400;
+			}
+		}
 	}
 	&__btn-icon {
 		flex: 0 0 rem(18);

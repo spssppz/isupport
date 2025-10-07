@@ -85,6 +85,13 @@
 	align-items: center;
 	padding: rem(16);
 	position: relative;
+	will-change: transform;
+	transition: transform 0.35s;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
 	@media (max-width: $mobile) {
 		padding: rem(16) rem(8);
 	}

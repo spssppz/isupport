@@ -409,13 +409,36 @@ export const tabs = () => {
 export const menuInit = () => {
 	if (document.querySelector(".icon-menu")) {
 		document.addEventListener("click", e => {
-			if (bodyLockStatus && e.target.closest('.icon-menu')) {
-				bodyLockToggle()
-				document.documentElement.classList.toggle("menu-open")
+			const menuBtn = e.target.closest('.icon-menu')
+			if (!menuBtn || !bodyLockStatus) return
+
+			const html = document.documentElement
+			const isMenuOpen = html.classList.contains('menu-open')
+
+			// Если открыты контакты — закрываем
+			if (html.classList.contains('header-contacts-show')) {
+				html.classList.remove('header-contacts-show')
+			}
+			// Если открыт каталог — закрываем
+			if (html.classList.contains('open-catalog')) {
+				html.classList.remove('open-catalog')
+				document.querySelector('.sub-catalog-current')?.classList.remove('sub-catalog-current')
+				document.querySelector('.current-catalog-btn')?.classList.remove('current-catalog-btn')
+			}
+
+			// Управляем меню чётко
+			if (isMenuOpen) {
+				menuClose() // bodyUnlock() + removeClass
+				console.log('close menu');
+
+			} else {
+				menuOpen() // bodyLock() + addClass
 			}
 		})
 	}
 }
+
+
 
 export function menuOpen() {
 	bodyLock()

@@ -47,6 +47,10 @@
 	right: rem(-16);
 	left: rem(-16);
 	margin-top: rem(-22);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: 0.3s;
 	&__btn {
 		flex: 0 0 rem(44);
 		width: rem(44);
@@ -67,7 +71,8 @@
 			opacity 0.3s;
 		@media (any-hover: hover) {
 			&:hover {
-				background: rgba($white, 0.8);
+				backdrop-filter: blur(rem(2));
+				background: $white;
 			}
 		}
 		&_next {
@@ -79,6 +84,16 @@
 		width: rem(28);
 		height: rem(28);
 	}
+}
+.swiper-initialized ~ .slider-nav {
+	opacity: 1;
+	visibility: visible;
+}
+
+.swiper-button-disabled {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
 
 .slider-pagination {
